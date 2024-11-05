@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drum Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+  <div class="container">
+    
+    <!-- Top Control Bar -->
+    <div class="top-bar">
+      <button class="btn play-btn">▶</button>
+      <span class="info">BPM 112 | Pattern 1</span>
+      <button class="btn hold-clear">Hold to Clear</button>
+      <input type="text" class="demo-selector" value="Demo_04">
+      <button class="btn new-btn">New</button>
+      <button class="btn duplicate-btn">Duplicate</button>
+      <button class="btn load-btn">Load</button>
+      <button class="btn export-btn">Export</button>
+      <button class="btn midi-btn">MIDI</button>
+      <input type="range" class="swing-slider" min="0" max="100" value="50">
+    </div>
+    
+    <!-- Left Side: Drum Pads and Info Panel -->
+    <div class="left-panel">
+      <!-- Drum Pads -->
+      <div class="drum-pads">
+        <button class="pad-btn">Cowbell</button>
+        <button class="pad-btn">Tom</button>
+        <button class="pad-btn">Cymbal</button>
+        <button class="pad-btn">HHOpen</button>
+        <button class="pad-btn">Clap</button>
+        <button class="pad-btn">HHClose</button>
+        <button class="pad-btn">Rimshot</button>
+        <button class="pad-btn">Snare</button>
+        <button class="pad-btn">Kick</button>
+      </div>
+      
+      <!-- Info Panel -->
+      <div class="info-panel">
+        <h2>TDMS</h2>
+        <p>The Drum Machine</p>
+        <p>This project was developed to enjoy beat making for free without installing heavy programs</p>
+        <button class="visit-btn">Visit My Website</button>
+        <button class="clone-btn">Clone in Webflow</button>
+      </div>
+    </div>
+    
+    <!-- Sequencer Grid -->
+    <div class="sequencer-grid">
+      <div class="grid-header">
+        <span>8/4</span>
+        <div class="steps-indicator">
+          <!-- Add indicators for 32 steps -->
+          <span class="step-indicator"></span>
+          <span class="step-indicator"></span>
+          <!-- Repeat up to 32 indicators -->
+        </div>
+      </div>
+      
+      <div class="grid-rows">
+        <div class="steps">
+            <div class="steps-grid">
+              <div class="steps-row" style="margin-left: 100px;">
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+                <div class="light-1"></div>
+              </div>
+              <div class="steps-lights">
+                <a href="#" class="button-step w-button">kick</a>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+              </div>
+              <div class="steps-lights">
+                <a href="#" class="button-step w-button">snare</a>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light orange"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light orange"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+              </div>
+              <div class="steps-lights">
+                <a href="#" class="button-step w-button">cymbal</a>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+              </div>
+              <div class="steps-lights">
+                <a href="#" class="button-step w-button">hhclose</a>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light orange"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light orange"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light orange"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light orange"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+              </div>
+              <div class="steps-lights">
+                <a href="#" class="button-step w-button">hhopen</a>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+              </div>
+              <div class="steps-lights">
+                <a href="#" class="button-step w-button">clap</a>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+              </div>
+              <div class="steps-lights">
+                <a href="#" class="button-step w-button">rimshot</a>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light light orange"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light light orange"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light light orange"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+              </div>
+              <div class="steps-lights">
+                <a href="#" class="button-step w-button">tom</a>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+              </div>
+              <div class="steps-lights">
+                <a href="#" class="button-step w-button">cowbell</a>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+                <div class="step-light dark"></div>
+              </div>
+            </div>
+            <div class="rivet"></div>
+            <div class="rivet _2"></div>
+            <div class="rivet _3"></div>
+            <div class="rivet _4"></div>
+          </div>
+      </div>
+    </div>
+    
+    <!-- Right Side: Pattern Controls and Timeline -->
+    <div class="right-panel">
+      <div class="pattern-controls">
+        <button class="pattern-btn">Copy</button>
+        <button class="pattern-btn">Clear</button>
+        <div class="pattern-grid">
+          <!-- Add pattern selection buttons -->
+          <button class="pattern-cell">1</button>
+          <button class="pattern-cell">2</button>
+          <button class="pattern-cell">3</button>
+          <button class="pattern-cell">4</button>
+          <button class="pattern-cell">5</button>
+          <button class="pattern-cell">6</button>
+          <button class="pattern-cell">7</button>
+          <button class="pattern-cell">8</button>
+          <!-- Continue to 24 cells -->
+        </div>
+      </div>
+      
+      <div class="timeline">
+        <span>Song Mode</span>
+        <button class="btn clear-timeline">Hold to Clear</button>
+        <div class="timeline-grid">
+          <!-- Add timeline cells -->
+          <button class="timeline-cell">1</button>
+          <button class="timeline-cell">2</button>
+          <button class="timeline-cell">3</button>
+          <button class="timeline-cell">4</button>
+          <button class="timeline-cell">5</button>
+          <button class="timeline-cell">6</button>
+          <button class="timeline-cell">7</button>
+          <button class="timeline-cell">8</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom: Mixer and Effects Controls -->
+    <div class="mixer">
+      <!-- Individual channel controls -->
+      <div class="channel">
+        <span>Kick</span>
+        <input type="range" class="pitch-control control level" min="0" max="100">
+        <input type="range" class="pitch-control control pitch" min="0" max="100">
+        <input type="range" class="pitch-control control length" min="0" max="100">
+      </div>
+      <!-- Repeat for other channels (Snare, Cymbal, etc.) -->
+    </div>
+    
+    <div class="effects">
+      <button class="effect-btn">Overdrive</button>
+      <button class="effect-btn">Delay</button>
+      <button class="effect-btn">Reverb</button>
+      <button class="effect-btn">Phaser</button>
+      <button class="effect-btn">Dub Delay</button>
+    </div>
+    
+  </div>
+</body>
+</html>
